@@ -15,6 +15,12 @@ def install_requirements():
     if requirements_file.exists():
         print("Installing Python dependencies...")
         try:
+            # Upgrade pip first
+            subprocess.check_call([
+                sys.executable, "-m", "pip", "install", "--upgrade", "pip", "setuptools", "wheel"
+            ])
+            
+            # Install requirements
             subprocess.check_call([
                 sys.executable, "-m", "pip", "install", "-r", str(requirements_file)
             ])
@@ -22,6 +28,9 @@ def install_requirements():
             return True
         except subprocess.CalledProcessError as e:
             print(f"✗ Error installing dependencies: {e}")
+            print("Try installing manually:")
+            print(f"  pip install --upgrade pip setuptools wheel")
+            print(f"  pip install -r {requirements_file}")
             return False
     else:
         print("✗ requirements.txt not found")

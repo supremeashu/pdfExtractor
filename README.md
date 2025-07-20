@@ -58,8 +58,8 @@ headingExtractor/
 1. **Clone the repository**:
 
 ```bash
-git clone <your-repo-url>
-cd headingExtractor
+git clone https://github.com/supremeashu/pdfExtractor.git
+cd pdfExtractor
 ```
 
 2. **Create virtual environment** (recommended):
@@ -81,8 +81,14 @@ source .venv/bin/activate
 python setup.py
 
 # Method 2: Manual installation
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 ```
+
+**Note**: If you encounter installation issues on different systems:
+- **Windows**: Ensure you have Microsoft Visual C++ Build Tools installed
+- **macOS**: You may need to install Xcode command line tools: `xcode-select --install`
+- **Linux**: Install build essentials: `sudo apt-get install build-essential python3-dev`
 
 ### Verify Installation
 

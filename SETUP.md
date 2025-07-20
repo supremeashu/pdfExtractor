@@ -66,17 +66,47 @@ python main.py view your_document_headings.json
 ## 🚨 Common Issues
 
 **Import Error**: `No module named 'fitz'`
-
 ```bash
+# Solution 1: Upgrade pip and try again
+pip install --upgrade pip setuptools wheel
 pip install PyMuPDF
+
+# Solution 2: If on Windows and still failing
+pip install --only-binary=all PyMuPDF
+```
+
+**Build Error on macOS**: `Microsoft Visual C++ required`
+```bash
+# Install Xcode command line tools
+xcode-select --install
+```
+
+**Build Error on Linux**: `gcc not found`
+```bash
+# Ubuntu/Debian
+sudo apt-get update
+sudo apt-get install build-essential python3-dev
+
+# CentOS/RHEL
+sudo yum groupinstall "Development Tools"
+sudo yum install python3-devel
 ```
 
 **Permission Error**: Close PDF file if open in another application
 
 **Empty Results**: Try lower confidence threshold:
-
 ```bash
 python main.py extract document.pdf --min-confidence 0.5
+```
+
+**Virtual Environment Issues**:
+```bash
+# Windows - ensure proper activation
+.venv\Scripts\activate
+# Verify Python path
+python -c "import sys; print(sys.executable)"
+
+# Should show path inside .venv folder
 ```
 
 ## 📚 Next Steps
