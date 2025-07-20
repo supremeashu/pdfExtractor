@@ -6,14 +6,20 @@ text pattern recognition, and machine learning to identify document structure.
 """
 
 import fitz  # PyMuPDF
-import pdfplumber
+try:
+    import pdfplumber
+except ImportError:
+    pdfplumber = None
 import re
 import json
 from dataclasses import dataclass, asdict
 from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import logging
-import numpy as np
+try:
+    import numpy as np
+except ImportError:
+    np = None
 from collections import Counter, defaultdict
 
 # Configure logging
@@ -75,6 +81,14 @@ class Heading:
     def to_dict(self) -> Dict[str, Any]:
         return {
             'text': self.text.strip(),
+            'level': f"H{self.level}",  # Convert to H1, H2, H3 format
+            'page': self.page
+        }
+    
+    def to_detailed_dict(self) -> Dict[str, Any]:
+        """Return detailed format with font information and confidence"""
+        return {
+            'text': self.text.strip(),
             'level': self.level,
             'page': self.page,
             'font_size': round(self.font_size, 1),
@@ -93,9 +107,16 @@ class ExtractionResult:
     
     def to_dict(self) -> Dict[str, Any]:
         return {
+            'title': self.title,
+            'outline': [h.to_dict() for h in self.headings]
+        }
+    
+    def to_detailed_dict(self) -> Dict[str, Any]:
+        """Return detailed format with all metadata"""
+        return {
             'document_info': self.document_info,
             'title': self.title,
-            'headings': [h.to_dict() for h in self.headings],
+            'headings': [h.to_detailed_dict() for h in self.headings],
             'extraction_stats': self.extraction_stats
         }
 
@@ -223,6 +244,10 @@ class PDFHeadingExtractor:
     def _extract_with_pdfplumber(self, pdf_path: str) -> List[TextElement]:
         """Fallback extraction using pdfplumber"""
         text_elements = []
+        
+        if pdfplumber is None:
+            logger.warning("pdfplumber not available, skipping fallback extraction")
+            return text_elements
         
         try:
             with pdfplumber.open(pdf_path) as pdf:
@@ -500,11 +525,19 @@ class PDFHeadingExtractor:
             extraction_stats={'total_headings': 0, 'h1_count': 0, 'h2_count': 0, 'h3_count': 0}
         )
     
-    def save_json(self, result: ExtractionResult, output_path: str) -> None:
-        """Save extraction result to JSON file"""
+    def save_json(self, result: ExtractionResult, output_path: str, detailed: bool = False) -> None:
+        """
+        Save extraction result to JSON file
+        
+        Args:
+            result: Extraction result to save
+            output_path: Path to save JSON file
+            detailed: If True, saves detailed format with metadata. If False, saves simplified format.
+        """
         try:
+            data = result.to_detailed_dict() if detailed else result.to_dict()
             with open(output_path, 'w', encoding='utf-8') as f:
-                json.dump(result.to_dict(), f, indent=2, ensure_ascii=False)
+                json.dump(data, f, indent=2, ensure_ascii=False)
             logger.info(f"Results saved to: {output_path}")
         except Exception as e:
             logger.error(f"Error saving JSON: {str(e)}")

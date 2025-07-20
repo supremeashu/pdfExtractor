@@ -1,0 +1,30 @@
+{
+  "title": "Sample Document",
+  "outline": [
+    {
+      "text": "Introduction",
+      "level": "H1",
+      "page": 1
+    },
+    {
+      "text": "Background",
+      "level": "H2",
+      "page": 2
+    },
+    {
+      "text": "Methodology",
+      "level": "H1",
+      "page": 3
+    },
+    {
+      "text": "Data Analysis",
+      "level": "H2",
+      "page": 4
+    },
+    {
+      "text": "Results",
+      "level": "H1",
+      "page": 5
+    }
+  ]
+}

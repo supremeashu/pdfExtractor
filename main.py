@@ -29,9 +29,10 @@ def cli():
 @click.argument('pdf_path', type=click.Path(exists=True))
 @click.option('--output', '-o', default=None, help='Output JSON file path')
 @click.option('--verbose', '-v', is_flag=True, help='Verbose output')
+@click.option('--detailed', is_flag=True, help='Save detailed format with font info and confidence scores')
 @click.option('--max-pages', default=50, help='Maximum pages to process')
 @click.option('--confidence-threshold', default=0.6, help='Heading confidence threshold (0.0-1.0)')
-def extract(pdf_path, output, verbose, max_pages, confidence_threshold):
+def extract(pdf_path, output, verbose, detailed, max_pages, confidence_threshold):
     """Extract headings from a single PDF file"""
     
     # Validate inputs
@@ -71,7 +72,7 @@ def extract(pdf_path, output, verbose, max_pages, confidence_threshold):
             progress.update(task, description="Saving results...")
             
             # Save results
-            extractor.save_json(result, output)
+            extractor.save_json(result, output, detailed=detailed)
         
         # Display results
         _display_results(result, verbose)
@@ -86,9 +87,10 @@ def extract(pdf_path, output, verbose, max_pages, confidence_threshold):
 @click.argument('input_dir', type=click.Path(exists=True))
 @click.option('--output-dir', '-o', default='results', help='Output directory for JSON files')
 @click.option('--pattern', default='*.pdf', help='File pattern to match')
+@click.option('--detailed', is_flag=True, help='Save detailed format with font info and confidence scores')
 @click.option('--max-pages', default=50, help='Maximum pages to process per PDF')
 @click.option('--confidence-threshold', default=0.6, help='Heading confidence threshold')
-def batch(input_dir, output_dir, pattern, max_pages, confidence_threshold):
+def batch(input_dir, output_dir, pattern, detailed, max_pages, confidence_threshold):
     """Batch process multiple PDF files"""
     
     # Find PDF files
@@ -124,7 +126,7 @@ def batch(input_dir, output_dir, pattern, max_pages, confidence_threshold):
                 progress.update(task, description=f"Processing {filename}...")
                 
                 result = extractor.extract_headings(pdf_file)
-                extractor.save_json(result, output_file)
+                extractor.save_json(result, output_file, detailed=detailed)
                 
                 success_count += 1
                 

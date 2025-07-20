@@ -1,0 +1,81 @@
+{
+  "title": "Sample Document",
+  "headings": [
+    {
+      "text": "Introduction",
+      "level": 1,
+      "page": 1,
+      "font_name": "Arial-Bold",
+      "font_size": 16.0,
+      "bbox": [
+        100,
+        200,
+        300,
+        220
+      ],
+      "confidence": 0.95
+    },
+    {
+      "text": "Background",
+      "level": 2,
+      "page": 2,
+      "font_name": "Arial",
+      "font_size": 14.0,
+      "bbox": [
+        100,
+        250,
+        280,
+        270
+      ],
+      "confidence": 0.9
+    },
+    {
+      "text": "Methodology",
+      "level": 1,
+      "page": 3,
+      "font_name": "Arial-Bold",
+      "font_size": 16.0,
+      "bbox": [
+        100,
+        300,
+        350,
+        320
+      ],
+      "confidence": 0.93
+    },
+    {
+      "text": "Data Analysis",
+      "level": 2,
+      "page": 4,
+      "font_name": "Arial",
+      "font_size": 14.0,
+      "bbox": [
+        100,
+        350,
+        320,
+        370
+      ],
+      "confidence": 0.88
+    },
+    {
+      "text": "Results",
+      "level": 1,
+      "page": 5,
+      "font_name": "Arial-Bold",
+      "font_size": 16.0,
+      "bbox": [
+        100,
+        400,
+        250,
+        420
+      ],
+      "confidence": 0.96
+    }
+  ],
+  "metadata": {
+    "extraction_date": "2024-01-15T10:30:00",
+    "total_pages": 10,
+    "processing_time": 2.5,
+    "confidence_threshold": 0.8
+  }
+}

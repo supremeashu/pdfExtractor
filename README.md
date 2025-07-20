@@ -86,6 +86,7 @@ pip install -r requirements.txt
 ```
 
 **Note**: If you encounter installation issues on different systems:
+
 - **Windows**: Ensure you have Microsoft Visual C++ Build Tools installed
 - **macOS**: You may need to install Xcode command line tools: `xcode-select --install`
 - **Linux**: Install build essentials: `sudo apt-get install build-essential python3-dev`
@@ -107,24 +108,27 @@ python main.py extract "sample.pdf"
 #### Basic Extraction
 
 ```bash
-# Extract headings from a single PDF
+# Extract headings in simplified format (default)
 python main.py extract "document.pdf"
+
+# Extract with detailed format including font info and confidence
+python main.py extract "document.pdf" --detailed
 
 # Extract with custom output filename
 python main.py extract "document.pdf" --output "my_headings.json"
 
 # Extract with detailed verbose output
-python main.py extract "document.pdf" --verbose
+python main.py extract "document.pdf" --verbose --detailed
 ```
 
 #### Batch Processing
 
 ```bash
-# Process all PDFs in a directory
+# Process all PDFs in simplified format (default)
 python main.py batch "pdf_folder/" --output-dir "results/"
 
-# Process with custom settings
-python main.py batch "pdfs/" --output-dir "output/" --max-pages 30
+# Process with detailed format including font and confidence data
+python main.py batch "pdfs/" --output-dir "output/" --detailed --max-pages 30
 ```
 
 #### View Results
@@ -153,11 +157,14 @@ extractor = PDFHeadingExtractor(
 result = extractor.extract_headings("document.pdf")
 
 # Access results
-print(f"Title: {result['title']}")
-print(f"Total headings: {len(result['headings'])}")
+print(f"Title: {result.title}")
+print(f"Total headings: {len(result.headings)}")
 
-# Save to JSON
+# Save in simplified format (default)
 extractor.save_json(result, "output.json")
+
+# Save in detailed format with all metadata
+extractor.save_json(result, "detailed_output.json", detailed=True)
 ```
 
 ## 🧪 Testing Your Setup
@@ -180,6 +187,33 @@ python main.py view "your_document_headings.json"
 ### Expected Output
 
 The tool will generate a JSON file with this structure:
+
+**Simplified Format (default)**:
+
+```json
+{
+	"title": "Lab Manual",
+	"outline": [
+		{
+			"text": "Object Oriented Programming Lab",
+			"level": "H1",
+			"page": 1
+		},
+		{
+			"text": "EXPERIMENT 1",
+			"level": "H3",
+			"page": 6
+		},
+		{
+			"text": "EXPERIMENT 2",
+			"level": "H3",
+			"page": 7
+		}
+	]
+}
+```
+
+**Detailed Format (with `--detailed` flag)**:
 
 ```json
 {
