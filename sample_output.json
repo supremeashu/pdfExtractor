@@ -1,0 +1,137 @@
+{
+  "document_info": {
+    "filename": "sample_document.pdf",
+    "total_pages": 15,
+    "extraction_timestamp": "2025-01-20T10:30:00Z",
+    "total_text_elements": 342
+  },
+  "title": "Advanced Machine Learning Techniques in Natural Language Processing",
+  "headings": [
+    {
+      "text": "Abstract",
+      "level": 1,
+      "page": 1,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.95
+    },
+    {
+      "text": "Introduction",
+      "level": 1,
+      "page": 2,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.93
+    },
+    {
+      "text": "Background and Related Work",
+      "level": 2,
+      "page": 3,
+      "font_size": 14.0,
+      "font_weight": "bold",
+      "confidence": 0.88
+    },
+    {
+      "text": "Previous Approaches",
+      "level": 3,
+      "page": 3,
+      "font_size": 12.0,
+      "font_weight": "bold",
+      "confidence": 0.82
+    },
+    {
+      "text": "Limitations of Current Methods",
+      "level": 3,
+      "page": 4,
+      "font_size": 12.0,
+      "font_weight": "bold",
+      "confidence": 0.85
+    },
+    {
+      "text": "Methodology",
+      "level": 1,
+      "page": 5,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.94
+    },
+    {
+      "text": "Data Collection and Preprocessing",
+      "level": 2,
+      "page": 5,
+      "font_size": 14.0,
+      "font_weight": "bold",
+      "confidence": 0.87
+    },
+    {
+      "text": "Model Architecture",
+      "level": 2,
+      "page": 7,
+      "font_size": 14.0,
+      "font_weight": "bold",
+      "confidence": 0.89
+    },
+    {
+      "text": "Training and Evaluation",
+      "level": 2,
+      "page": 9,
+      "font_size": 14.0,
+      "font_weight": "bold",
+      "confidence": 0.86
+    },
+    {
+      "text": "Results",
+      "level": 1,
+      "page": 11,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.92
+    },
+    {
+      "text": "Quantitative Analysis",
+      "level": 2,
+      "page": 11,
+      "font_size": 14.0,
+      "font_weight": "bold",
+      "confidence": 0.84
+    },
+    {
+      "text": "Qualitative Assessment",
+      "level": 2,
+      "page": 13,
+      "font_size": 14.0,
+      "font_weight": "bold",
+      "confidence": 0.83
+    },
+    {
+      "text": "Discussion",
+      "level": 1,
+      "page": 14,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.91
+    },
+    {
+      "text": "Conclusion",
+      "level": 1,
+      "page": 15,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.94
+    },
+    {
+      "text": "References",
+      "level": 1,
+      "page": 15,
+      "font_size": 16.0,
+      "font_weight": "bold",
+      "confidence": 0.96
+    }
+  ],
+  "extraction_stats": {
+    "total_headings": 15,
+    "h1_count": 6,
+    "h2_count": 7,
+    "h3_count": 2
+  }
+}
