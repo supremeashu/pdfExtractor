@@ -1,0 +1,22 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Output files (optional - you might want to keep sample outputs)
+*.pdf
+*_headings.json
+
+# OS files
+.DS_Store
+Thumbs.db
