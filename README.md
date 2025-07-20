@@ -2,7 +2,7 @@
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/your-username/headingExtractor/workflows/PDF%20Heading%20Extractor%20Tests/badge.svg)](https://github.com/your-username/headingExtractor/actions)
+[![Tests](https://github.com/supremeashu/pdfExtractor/workflows/PDF%20Heading%20Extractor%20Tests/badge.svg)](https://github.com/supremeashu/pdfExtractor/actions)
 
 A robust Python application that extracts structured headings and titles from PDF documents using advanced font analysis and machine learning techniques. Converts PDF structure into clean hierarchical JSON with page numbers, heading levels, and confidence scores.
 
