@@ -278,6 +278,17 @@ python main.py extract "document.pdf" --min-confidence 0.5
 python -c "import sys; print(sys.executable)"
 ```
 
+**Encoding issues on Windows**
+
+```bash
+# Set environment variables for proper encoding
+set PYTHONIOENCODING=utf-8
+python main.py extract document.pdf
+
+# Or run tests with explicit encoding
+python -c "import locale; print(locale.getpreferredencoding())"
+```
+
 ### Getting Help
 
 1. **Check verbose output**: Add `--verbose` flag to see detailed processing

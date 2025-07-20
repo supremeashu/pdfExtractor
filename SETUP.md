@@ -25,8 +25,8 @@ python setup.py
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/headingExtractor.git
-cd headingExtractor
+git clone https://github.com/supremeashu/pdfExtractor.git
+cd pdfExtractor
 
 # Create virtual environment (recommended)
 python -m venv .venv
@@ -37,7 +37,8 @@ python -m venv .venv
 # macOS/Linux:
 source .venv/bin/activate
 
-# Install dependencies
+# Install dependencies with proper encoding
+pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 ```
 
