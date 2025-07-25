@@ -17,7 +17,7 @@ env/
 debug_*.py
 test_*.py
 generate_*.py
-*_test.py
+# *_test.py
 *_debug.py
 local_test_results/
 temp_*/
