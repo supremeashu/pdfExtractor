@@ -1,13 +1,20 @@
+#!/usr/bin/env python3
 """
-Fast PDF Heading Extractor - Optimized for speed and accuracy
+PDF Processing Script for Adobe Hackathon Challenge 1a
+Processes all PDFs from /app/input and outputs JSON to /app/output
 """
 
+import os
+import sys
+import json
+import time
+from pathlib import Path
+
+# Import our fast extractor
 import fitz  # PyMuPDF
 import re
-import json
 from dataclasses import dataclass
 from typing import List, Dict, Any, Optional, Tuple
-from datetime import datetime
 from collections import Counter
 
 @dataclass
@@ -38,7 +45,7 @@ class Heading:
         }
 
 class FastPDFHeadingExtractor:
-    """Optimized PDF heading extraction for speed"""
+    """Optimized PDF heading extraction for Adobe Hackathon"""
     
     def __init__(self, max_pages: int = 50):
         self.max_pages = max_pages
@@ -80,7 +87,7 @@ class FastPDFHeadingExtractor:
             }
             
         except Exception as e:
-            print(f"Error: {e}")
+            print(f"Error processing {pdf_path}: {e}")
             return {"title": None, "outline": []}
     
     def _extract_text_fast(self, pdf_path: str) -> List[TextElement]:
@@ -249,7 +256,61 @@ class FastPDFHeadingExtractor:
         
         return 0  # Not a heading
 
-def save_json(result: Dict[str, Any], output_path: str) -> None:
-    """Save result to JSON file"""
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+def process_pdfs():
+    """
+    Main processing function that processes all PDFs from /app/input
+    and outputs JSON files to /app/output
+    """
+    input_dir = Path("/app/input")
+    output_dir = Path("/app/output")
+    
+    print(f"Processing PDFs from: {input_dir}")
+    print(f"Output directory: {output_dir}")
+    
+    # Ensure output directory exists
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Initialize extractor
+    extractor = FastPDFHeadingExtractor()
+    
+    # Get all PDF files
+    pdf_files = list(input_dir.glob("*.pdf"))
+    
+    if not pdf_files:
+        print("No PDF files found in input directory")
+        return
+    
+    print(f"Found {len(pdf_files)} PDF files to process")
+    
+    total_start_time = time.time()
+    
+    for pdf_file in pdf_files:
+        print(f"Processing: {pdf_file.name}")
+        
+        start_time = time.time()
+        
+        # Extract headings
+        result = extractor.extract_headings(str(pdf_file))
+        
+        # Generate output filename
+        output_file = output_dir / f"{pdf_file.stem}.json"
+        
+        # Save JSON output
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(result, f, indent=2, ensure_ascii=False)
+        
+        end_time = time.time()
+        processing_time = end_time - start_time
+        
+        print(f"  ✓ Completed in {processing_time:.3f}s")
+        print(f"  ✓ Found {len(result['outline'])} headings")
+        print(f"  ✓ Output: {output_file.name}")
+    
+    total_time = time.time() - total_start_time
+    print(f"\n=== Processing Complete ===")
+    print(f"Total time: {total_time:.3f} seconds")
+    print(f"Average per file: {total_time/len(pdf_files):.3f} seconds")
+    print(f"Processed {len(pdf_files)} files successfully")
+
+if __name__ == "__main__":
+    process_pdfs()
