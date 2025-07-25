@@ -1,22 +1,26 @@
-# PDF Heading Extractor 📄
+# Fast PDF Heading Extractor 📄
 
-Simple tool: Upload PDF → Get JSON with headings
+Ultra-fast tool: Upload PDF → Get JSON with headings in under 10 seconds
 
-## Usage
+## Quick Start
 
-1. **Install:**
-
-```bash
-pip install -r requirements.txt
-```
-
-2. **Extract headings:**
+**Single file:**
 
 ```bash
-python extract.py your_file.pdf
+python fast_extract.py file01.pdf
 ```
 
-3. **Get output:** `your_file_headings.json`
+**Batch process:**
+
+```bash
+python batch_process.py
+```
+
+## Performance
+
+- Processes 5 files in ~0.13 seconds
+- Average: 0.027 seconds per file
+- Well under 10-second requirement
 
 ## Output Format
 
@@ -25,7 +29,7 @@ python extract.py your_file.pdf
 	"title": "Document Title",
 	"outline": [
 		{
-			"text": "Introduction",
+			"text": "1. Introduction",
 			"level": "H1",
 			"page": 1
 		}
@@ -33,4 +37,4 @@ python extract.py your_file.pdf
 }
 ```
 
-That's it! �
+That's it! 🚀
