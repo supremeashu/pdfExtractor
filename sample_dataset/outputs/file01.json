@@ -1,4 +1,30 @@
 {
-    "title": "Application form for grant of LTC advance  ",
-    "outline": []
+  "title": "Application form for grant of LTC advance",
+  "outline": [
+    {
+      "text": "Age",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Date",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Name",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "Relationship",
+      "level": "H3",
+      "page": 1
+    },
+    {
+      "text": "S.No",
+      "level": "H3",
+      "page": 1
+    }
+  ]
 }

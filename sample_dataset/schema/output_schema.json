@@ -1,37 +1,37 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "PDF Heading Extraction Output Schema",
-  "description": "Schema for JSON output from PDF heading extraction",
-  "type": "object",
-  "properties": {
-    "title": {
-      "type": ["string", "null"],
-      "description": "Main title of the document, null if no title found"
-    },
-    "outline": {
-      "type": "array",
-      "description": "Array of extracted headings in hierarchical order",
-      "items": {
-        "type": "object",
-        "properties": {
-          "text": {
-            "type": "string",
-            "description": "The text content of the heading"
-          },
-          "level": {
-            "type": "string",
-            "enum": ["H1", "H2", "H3"],
-            "description": "Hierarchical level of the heading"
-          },
-          "page": {
-            "type": "integer",
-            "minimum": 1,
-            "description": "Page number where the heading appears"
-          }
-        },
-        "required": ["text", "level", "page"]
-      }
-    }
-  },
-  "required": ["title", "outline"]
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"title": "PDF Heading Extraction Output Schema",
+	"description": "Schema for JSON output from PDF heading extraction",
+	"type": "object",
+	"properties": {
+		"title": {
+			"type": "string",
+			"description": "Main title of the document"
+		},
+		"outline": {
+			"type": "array",
+			"description": "Array of extracted headings in hierarchical order",
+			"items": {
+				"type": "object",
+				"properties": {
+					"text": {
+						"type": "string",
+						"description": "The text content of the heading"
+					},
+					"level": {
+						"type": "string",
+						"enum": ["H1", "H2", "H3"],
+						"description": "Hierarchical level of the heading"
+					},
+					"page": {
+						"type": "integer",
+						"minimum": 1,
+						"description": "Page number where the heading appears"
+					}
+				},
+				"required": ["text", "level", "page"]
+			}
+		}
+	},
+	"required": ["title", "outline"]
 }

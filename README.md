@@ -15,23 +15,26 @@ This is a high-performance PDF processing solution for Adobe India Hackathon 202
 ## Official Challenge Requirements
 
 ### Submission Requirements
+
 ✅ **GitHub Project**: Complete code repository with working solution  
 ✅ **Dockerfile**: Present in root directory and functional  
-✅ **README.md**: Documentation explaining solution, models, and libraries used  
+✅ **README.md**: Documentation explaining solution, models, and libraries used
 
 ### Critical Constraints
+
 ✅ **Execution Time**: ≤ 10 seconds for 50-page PDF (our avg: 0.027s per file)  
 ✅ **Model Size**: ≤ 200MB (no ML models used, only lightweight extraction)  
 ✅ **Network**: No internet access during runtime (all dependencies pre-installed)  
 ✅ **Runtime**: CPU only with 8 CPUs and 16GB RAM  
-✅ **Architecture**: AMD64 compatible  
+✅ **Architecture**: AMD64 compatible
 
 ### Key Requirements
+
 ✅ **Automatic Processing**: Processes all PDFs from `/app/input` directory  
 ✅ **Output Format**: Generates `filename.json` for each `filename.pdf`  
 ✅ **Input Directory**: Read-only access only  
 ✅ **Open Source**: All libraries and tools are open source  
-✅ **Cross-Platform**: Tested on simple and complex PDFs  
+✅ **Cross-Platform**: Tested on simple and complex PDFs
 
 ## Solution Structure
 
@@ -51,11 +54,13 @@ pdfExtractor/
 ## Implementation Details
 
 ### Core Technology Stack
+
 - **Python 3.10**: Main runtime environment
 - **PyMuPDF (fitz)**: Fast PDF text extraction and font analysis
 - **Docker**: Containerization for consistent deployment
 
 ### Algorithm Overview
+
 1. **Text Extraction**: Fast extraction of text elements with font metadata
 2. **Font Analysis**: Statistical analysis of font sizes and styles
 3. **Pattern Recognition**: Regex patterns for numbered sections (1., 2.1, etc.)
@@ -63,6 +68,7 @@ pdfExtractor/
 5. **Title Detection**: Largest font text in document header area
 
 ### Performance Optimizations
+
 - Minimal dependencies (only PyMuPDF required)
 - Efficient memory usage with stream processing
 - Quick font statistics calculation
@@ -72,16 +78,19 @@ pdfExtractor/
 ## Docker Usage
 
 ### Build Command
+
 ```bash
 docker build --platform linux/amd64 -t pdfextractor.headingprocessor .
 ```
 
 ### Run Command
+
 ```bash
 docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output/pdfextractor/:/app/output --network none pdfextractor.headingprocessor
 ```
 
 ### Local Testing with Sample Data
+
 ```bash
 # Build the image
 docker build --platform linux/amd64 -t pdfextractor.headingprocessor .
@@ -96,19 +105,19 @@ Each PDF generates a corresponding JSON file conforming to the schema in `sample
 
 ```json
 {
-  "title": "Document Title",
-  "outline": [
-    {
-      "text": "1. Introduction",
-      "level": "H1",
-      "page": 1
-    },
-    {
-      "text": "1.1 Overview", 
-      "level": "H2",
-      "page": 1
-    }
-  ]
+	"title": "Document Title",
+	"outline": [
+		{
+			"text": "1. Introduction",
+			"level": "H1",
+			"page": 1
+		},
+		{
+			"text": "1.1 Overview",
+			"level": "H2",
+			"page": 1
+		}
+	]
 }
 ```
 
@@ -116,13 +125,13 @@ Each PDF generates a corresponding JSON file conforming to the schema in `sample
 
 Based on our test dataset:
 
-| File | Processing Time | Headings Found | Status |
-|------|----------------|----------------|---------|
-| file01.pdf | 0.008s | 5 | ✅ |
-| file02.pdf | 0.054s | 23 | ✅ |
-| file03.pdf | 0.029s | 27 | ✅ |
-| file04.pdf | 0.010s | 5 | ✅ |
-| file05.pdf | 0.008s | 10 | ✅ |
+| File       | Processing Time | Headings Found | Status |
+| ---------- | --------------- | -------------- | ------ |
+| file01.pdf | 0.008s          | 5              | ✅     |
+| file02.pdf | 0.054s          | 23             | ✅     |
+| file03.pdf | 0.029s          | 27             | ✅     |
+| file04.pdf | 0.010s          | 5              | ✅     |
+| file05.pdf | 0.008s          | 10             | ✅     |
 
 **Total Batch Time**: 0.109 seconds  
 **Average per File**: 0.022 seconds  
@@ -131,7 +140,7 @@ Based on our test dataset:
 ## Validation Checklist
 
 - ✅ All PDFs in input directory are processed
-- ✅ JSON output files are generated for each PDF  
+- ✅ JSON output files are generated for each PDF
 - ✅ Output format matches required structure
 - ✅ Output conforms to schema in `sample_dataset/schema/output_schema.json`
 - ✅ Processing completes within 10 seconds for 50-page PDFs
@@ -142,6 +151,7 @@ Based on our test dataset:
 ## Dependencies
 
 Only minimal, open-source dependencies:
+
 - `PyMuPDF`: Fast PDF processing library
 - `Python 3.10`: Runtime environment
 

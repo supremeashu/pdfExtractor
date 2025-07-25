@@ -13,10 +13,21 @@ env/
 .vscode/
 .idea/
 
-# Output files (optional - you might want to keep sample outputs)
-*.pdf
-*_headings.json
+# Development and testing files
+debug_*.py
+test_*.py
+generate_*.py
+*_test.py
+*_debug.py
+local_test_results/
+temp_*/
 
 # OS files
 .DS_Store
 Thumbs.db
+
+# Keep sample_dataset files for Adobe Hackathon
+!sample_dataset/
+!sample_dataset/pdfs/*.pdf
+!sample_dataset/outputs/*.json
+!sample_dataset/schema/*.json
