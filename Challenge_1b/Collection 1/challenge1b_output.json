@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "input_documents": [
+      "South of France - Cities.pdf",
+      "South of France - Cuisine.pdf",
+      "South of France - History.pdf",
+      "South of France - Restaurants and Hotels.pdf",
+      "South of France - Things to Do.pdf",
+      "South of France - Tips and Tricks.pdf",
+      "South of France - Traditions and Culture.pdf"
+    ],
+    "persona": "Travel Planner",
+    "job_to_be_done": "Plan a trip of 4 days for a group of 10 college friends."
+  },
+  "extracted_sections": [
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Budget-Friendly Hotels",
+      "importance_rank": 1,
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "section_title": "Culinary Experiences",
+      "importance_rank": 2,
+      "page_number": 6
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "section_title": "Aix-en-Provence: A City of Art and Culture",
+      "importance_rank": 3,
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Upscale Hotels",
+      "importance_rank": 4,
+      "page_number": 11
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "section_title": "Perpignan: A Blend of French and Catalan Cultures",
+      "importance_rank": 5,
+      "page_number": 11
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "section_title": "Must-Visit Restaurants",
+      "importance_rank": 6,
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Luxurious Hotels",
+      "importance_rank": 7,
+      "page_number": 12
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "section_title": "Toulouse: The Pink City",
+      "importance_rank": 8,
+      "page_number": 9
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Budget-Friendly Restaurants",
+      "importance_rank": 9,
+      "page_number": 2
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Upscale Restaurants",
+      "importance_rank": 10,
+      "page_number": 4
+    },
+    {
+      "document": "South of France - History.pdf",
+      "section_title": "Aix-en-Provence: A City of Art and Culture",
+      "importance_rank": 11,
+      "page_number": 9
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "section_title": "Luxurious Restaurants",
+      "importance_rank": 12,
+      "page_number": 6
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "South of France - Cities.pdf",
+      "refined_text": "Aerospace Industry Airbus Factory Tours: Visit the Airbus factory for a fascinating tour of one of the world's leading aircraft manufacturers. Aeroscopia Museum: Explore the history of aviation at the Aeroscopia Museum, which features a collection of historic aircraft. Cité de l'Espace: This space-themed science museum features interactive exhibits, a planetarium, and a replica of the Mir space station. It's an engaging and educational experience for visitors of all ages.",
+      "page_number": 9
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "refined_text": "Culinary Experiences In addition to dining at top restaurants, there are several culinary experiences you should consider: Cooking Classes: Many towns and cities in the South of France oﬀer cooking classes where you can learn to prepare traditional dishes like bouillabaisse, ratatouille, and tarte tropézienne. You'll be accompanied by a trained truﬄe dog and a knowledgeable guide who will teach you about the truﬄe's history and culinary uses.",
+      "page_number": 6
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "refined_text": "Aix-en-Provence: A City of Art and Culture History Aix-en-Provence, founded by the Romans in 123 BC, is known for its elegant architecture, vibrant cultural scene, and association with the painter Paul Cézanne. Local Markets: Visit the city's famous markets, such as the flower market at Place de l'Hôtel de Ville or the food market at Place Richelme. Key Attractions Cours Mirabeau: This grand boulevard, lined with plane trees, cafes, and fountains, is the heart of Aix-en-Provence.",
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "refined_text": "Budget-Friendly Hotels Ibis Budget Nice Californie Lenval (Nice): A budget-friendly hotel oﬀering comfortable rooms and easy access to the beach and city center. Hotel des Arts (Montpellier): A budget-friendly hotel located in the heart of Montpellier, oﬀering comfortable rooms and easy access to the city's attractions. Hotel Azur (Nice): A budget-friendly hotel oﬀering comfortable rooms and easy access to the beach and city center. The artistic decor and central location make it a popular choice.",
+      "page_number": 8
+    },
+    {
+      "document": "South of France - Cities.pdf",
+      "refined_text": "Cultural Fusion Festivals: Emphasize the blend of French and Catalan cultures in the city's festivals, cuisine, and traditions. It now houses the Casa Pairal Museum, which showcases the history and culture of the region. The city was once the capital of the Kingdom of Majorca and has a rich history reflected in its architecture and culture. Perpignan's strategic location has made it a crossroads of cultures and traditions.",
+      "page_number": 11
+    },
+    {
+      "document": "South of France - Cuisine.pdf",
+      "refined_text": "Must-Visit Restaurants To truly experience the culinary delights of the South of France, here are some restaurants you should consider visiting: Le Petit Nice Passedat (Marseille): A three-Michelin-starred restaurant oﬀering exquisite seafood dishes and stunning views of the Mediterranean. The restaurant's location on the cliﬀs overlooking the sea adds to the overall dining experience. The menu changes with the seasons, ensuring that each visit is a new and exciting experience.",
+      "page_number": 4
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "refined_text": "Hotel Martinez (Cannes): A luxurious hotel located on the Boulevard de la Croisette, oﬀering elegant rooms, a private beach, and a Michelin-starred restaurant. Hôtel Barrière Le Majestic (Cannes): A luxurious hotel located on the Boulevard de la Croisette, oﬀering elegant rooms, a private beach, and a Michelin-starred restaurant. Hôtel du Cap-Eden-Roc (Antibes): A luxurious hotel located on the Boulevard de la Croisette, oﬀering elegant rooms, a private beach, and a Michelin-starred restaurant.",
+      "page_number": 11
+    },
+    {
+      "document": "South of France - Restaurants and Hotels.pdf",
+      "refined_text": "Villa La Coste (Le Puy-Sainte-Réparade): A luxurious hotel set in a vineyard, oﬀering elegant rooms, a spa, and a Michelin-starred restaurant. Luxurious Hotels Grand-Hôtel du Cap-Ferrat, A Four Seasons Hotel (Saint-Jean-Cap-Ferrat): A luxurious hotel set on 7 hectares of Mediterranean gardens, oﬀering elegant rooms, a spa, and a private beach. Château Saint-Martin & Spa (Vence): A luxurious hotel set in a historic château, oﬀering elegant rooms, a Michelin-starred restaurant, and a world-class spa.",
+      "page_number": 12
+    }
+  ]
+}

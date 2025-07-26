@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "input_documents": [
+      "Learn Acrobat - Create and Convert_1.pdf",
+      "Learn Acrobat - Create and Convert_2.pdf",
+      "Learn Acrobat - Edit_1.pdf",
+      "Learn Acrobat - Edit_2.pdf",
+      "Learn Acrobat - Export_1.pdf",
+      "Learn Acrobat - Export_2.pdf",
+      "Learn Acrobat - Fill and Sign.pdf",
+      "Learn Acrobat - Generative AI_1.pdf",
+      "Learn Acrobat - Generative AI_2.pdf",
+      "Learn Acrobat - Request e-signatures_1.pdf",
+      "Learn Acrobat - Request e-signatures_2.pdf",
+      "Learn Acrobat - Share_1.pdf",
+      "Learn Acrobat - Share_2.pdf",
+      "Test Your Acrobat Exporting Skills.pdf",
+      "The Ultimate PDF Sharing Checklist.pdf"
+    ],
+    "persona": "HR professional",
+    "job_to_be_done": "Create and manage fillable forms for onboarding and compliance."
+  },
+  "extracted_sections": [
+    {
+      "document": "Learn Acrobat - Create and Convert_1.pdf",
+      "section_title": "People In This Message’s To:, Cc:, And Bcc",
+      "importance_rank": 1,
+      "page_number": 18
+    },
+    {
+      "document": "Learn Acrobat - Export_1.pdf",
+      "section_title": "Tile Size:",
+      "importance_rank": 2,
+      "page_number": 8
+    },
+    {
+      "document": "Learn Acrobat - Export_1.pdf",
+      "section_title": "Filter:",
+      "importance_rank": 3,
+      "page_number": 10
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "To fill text fields:",
+      "importance_rank": 4,
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "To fill radio option fields:",
+      "importance_rank": 5,
+      "page_number": 5
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Caution:",
+      "importance_rank": 6,
+      "page_number": 6
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Mobile:",
+      "importance_rank": 7,
+      "page_number": 17
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Save:",
+      "importance_rank": 8,
+      "page_number": 17
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Mobile:",
+      "importance_rank": 9,
+      "page_number": 17
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Save:",
+      "importance_rank": 10,
+      "page_number": 17
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "section_title": "Add Agreement Details:",
+      "importance_rank": 11,
+      "page_number": 12
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "section_title": "Set verification behavior:",
+      "importance_rank": 12,
+      "page_number": 3
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Learn Acrobat - Export_1.pdf",
+      "refined_text": "Tile Size: Divides the image being compressed into tiles of the given size. The default value of 256 is recommended. This option is available only for JPEG 2000 format.",
+      "page_number": 8
+    },
+    {
+      "document": "Learn Acrobat - Export_1.pdf",
+      "refined_text": "Filter: Lets you select a filtering algorithm. None : Compresses the image without a filter. Recommended for indexed-color and Bitmap-mode images. Sub: Optimizes the compression of images with even horizontal patterns or blends.",
+      "page_number": 10
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "To fill text fields: From the left panel, select Fill in form fields , and then select the field where you want to add text. Once you see the cursor and keypad, edit the text and then click elsewhere to enter. Note: Resize the first annotation you place to fit the check box or radio button in the document, and the next annotations you add will be of the same size and will fit the rest of the box/circle fields.",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "Caution: Once you add a signature or an initial to a form and save it, you cannot edit it again. To add your initials: From the Quick actions toolbar, select Add your signature or initials Select.",
+      "page_number": 6
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "Mobile: Select this option to create your signature on a mobile device. Clicking the link opens the web browser on your mobile device where you can draw or select an image of your signature.",
+      "page_number": 17
+    }
+  ]
+}
