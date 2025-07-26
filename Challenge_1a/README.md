@@ -1,5 +1,8 @@
 # Challenge 1a: PDF Processing Solution
 
+> **Author**: supremeashu  
+> **License**: MIT  
+
 ## Overview
 
 This is a high-performance PDF processing solution for Adobe India Hackathon 2025 Challenge 1a. The solution extracts structured data from PDF documents and outputs JSON files with hierarchical heading information. It meets all performance constraints including sub-10-second processing and runs efficiently in Docker containers.

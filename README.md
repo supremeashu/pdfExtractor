@@ -99,6 +99,15 @@ Both challenges produce structured JSON outputs with:
 - ✅ **Performance**: Optimized for hackathon time constraints
 - ✅ **Scalability**: Handles multiple document collections efficiently
 
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**supremeashu**
+- GitHub: [@supremeashu](https://github.com/supremeashu)
+
 ---
 
-**Built for hackathon submission - optimized for performance, accuracy, and ease of evaluation.**
+*Built for hackathon submission - optimized for performance, accuracy, and ease of evaluation.*

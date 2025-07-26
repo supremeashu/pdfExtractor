@@ -1,5 +1,8 @@
 # Challenge 1b: Multi-Collection PDF Analysis
 
+> **Author**: supremeashu  
+> **License**: MIT  
+
 ## Overview
 Advanced PDF analysis solution that processes multiple document collections and extracts relevant content based on specific personas and use cases.
 
