@@ -5,16 +5,20 @@ This repository contains solutions for PDF content extraction challenges, implem
 ## 🏆 Challenges
 
 ### Challenge 1a: Basic PDF Processing
+
 Located in `Challenge_1a/`
+
 - **Objective**: Extract headings and structure from PDF documents
 - **Technology**: Python, PyMuPDF
 - **Features**: Heading detection, JSON output, Docker containerization
 
-### Challenge 1b: Multi-Collection Persona-Based Analysis  
+### Challenge 1b: Multi-Collection Persona-Based Analysis
+
 Located in `Challenge_1b/`
+
 - **Objective**: Advanced PDF analysis with persona-specific content extraction
 - **Technology**: Python, PyMuPDF, Advanced NLP techniques
-- **Features**: 
+- **Features**:
   - Persona-based content filtering
   - Multi-document collection processing
   - Importance ranking and relevance scoring
@@ -23,6 +27,7 @@ Located in `Challenge_1b/`
 ## 🚀 Quick Start
 
 ### Challenge 1a
+
 ```bash
 cd Challenge_1a
 pip install -r requirements.txt
@@ -30,6 +35,7 @@ python process_pdfs.py
 ```
 
 ### Challenge 1b
+
 ```bash
 cd Challenge_1b
 pip install -r requirements.txt
@@ -46,7 +52,7 @@ cd Challenge_1a
 docker build -t challenge1a .
 docker run challenge1a
 
-# Challenge 1b  
+# Challenge 1b
 cd Challenge_1b
 docker build -t challenge1b .
 docker run challenge1b
@@ -61,16 +67,19 @@ docker run challenge1b
 ## 🎯 Key Features
 
 ### Advanced Section Detection
+
 - Smart heading identification using font analysis
 - Hierarchical content structure preservation
 - Multi-language support
 
 ### Persona-Based Analysis
+
 - **Travel Planner**: Optimized for itinerary and destination content
 - **HR Professional**: Focused on forms, workflows, and compliance
 - **Food Contractor**: Specialized in menu planning and dietary requirements
 
 ### Content Refinement
+
 - Task-specific keyword scoring
 - Importance ranking algorithms
 - Document diversity controls
@@ -79,6 +88,7 @@ docker run challenge1b
 ## 📝 Output Format
 
 Both challenges produce structured JSON outputs with:
+
 - Metadata and document information
 - Extracted sections with importance ranking
 - Refined text analysis optimized for specific personas
@@ -106,8 +116,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👤 Author
 
 **supremeashu**
+
 - GitHub: [@supremeashu](https://github.com/supremeashu)
 
 ---
 
-*Built for hackathon submission - optimized for performance, accuracy, and ease of evaluation.*
+_Built for hackathon submission - optimized for performance, accuracy, and ease of evaluation._

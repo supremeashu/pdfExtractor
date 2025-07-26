@@ -1,7 +1,7 @@
 # Challenge 1a: PDF Processing Solution
 
 > **Author**: supremeashu  
-> **License**: MIT  
+> **License**: MIT
 
 ## Overview
 
